@@ -1,0 +1,77 @@
+
+entity Person {
+	firstName String
+    lastName String
+    birthday Date
+    phoneNumber String
+}
+
+entity Team {
+	name String
+    city String
+    members List
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity User {
+	userName String
+	password String
+}
+
+entity Stadium {
+	name String
+    address String
+    type StadiumType
+}
+
+entity Referee {
+	person Person
+    level String
+}
+
+entity Match {
+	team1 Team
+    team2 Team
+}
+
+enum StadiumType {
+	SAN_5, SAN_7
+}
+
+entity PersonUser {
+	pseron Person
+    user User
+}
+
+entity PersonTeam {
+	pseron Person
+    team Team
+    role Role
+}
+
+entity PersonRole {
+	pseron Person
+    team Team
+}
+
+enum Position {
+    GOAL_KEEPER, DEFENDER, MIDDLE, ATTACKER
+}
+
+enum Role {
+    PLAYER, CAPTAIN, VICE_CAPTAIN, COACH
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

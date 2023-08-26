@@ -1,0 +1,4 @@
+org.springframework.test.context.ContextCustomizerFactory = com.vnsports.\
+    lovephui.config.TestContainersSpringContextCustomizerFactory,com.vnsports.\
+    lovephui.config.SqlTestContainersSpringContextCustomizerFactory,com.\
+    vnsports.lovephui.config.KafkaTestContainersSpringContextCustomizerFactory
